@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="Style/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="todo-card" aria-labelledby="page-title">
+        <header class="page-header">
+          <p class="eyebrow">Stay on track</p>
+          <h1 id="page-title">My to-do list</h1>
+          <p class="subtitle">Add a task and keep your day organized.</p>
+        </header>
+
+        <form id="task-form" class="task-form">
+          <div class="form-row">
+            <label for="task-name">Task name</label>
+            <input
+              id="task-name"
+              name="taskName"
+              type="text"
+              placeholder="e.g. Finish project notes"
+              required
+            />
+          </div>
+
+          <div class="form-row split-row">
+            <div>
+              <label for="task-priority">Priority</label>
+              <select id="task-priority" name="priority" required>
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+                <option value="Highest">Highest</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="task-date">Date</label>
+              <input id="task-date" name="date" type="date" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="task-description">Task description</label>
+            <textarea
+              id="task-description"
+              name="description"
+              rows="4"
+              placeholder="Add a few details about this task..."
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button id="save-button" class="save-button" type="submit">
+              Save task
+            </button>
+            <button id="reset-button" class="reset-button" type="button">
+              Reset all
+            </button>
+          </div>
+        </form>
+
+        <section class="tasks-section" aria-labelledby="tasks-title">
+          <div class="section-heading">
+            <h2 id="tasks-title">Saved tasks</h2>
+            <span id="task-count">0 tasks</span>
+          </div>
+          <div id="task-list" class="task-list" aria-live="polite">
+            <p class="empty-state">Your saved tasks will appear here.</p>
+          </div>
+        </section>
+
+        <div class="credit-box">
+          Made by
+          <a
+            href="https://gravityahmed.github.io/My-Portfolio-1/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            gravity_a7med
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
